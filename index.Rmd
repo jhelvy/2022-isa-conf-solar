@@ -80,7 +80,18 @@ background-color: #FFFFFF
 ## Between 2010 - 2020, global levelized cost of energy (LCOE) of utility-scale solar PV fell by 85%
 
 <center>
-<img src="images/cost_historical.png" width=70%>
+<img src="images/cost-world.png" width=70%>
+</center>
+
+---
+
+class: center, middle
+background-color: #FFFFFF
+
+## China's "gift to the world"
+
+<center>
+<img src="images/pv-production.png" width=60%>
 </center>
 
 ---
@@ -92,7 +103,7 @@ background-color: #FFFFFF
 
 .leftcol60[
 <center>
-<img src="images/pv_production.png" width=100%>
+<img src="images/pv-production.png" width=100%>
 </center>
 ]
 
@@ -108,9 +119,37 @@ China comprises ~70% of global PV manufacturing
 
 ---
 
-# Same tensions in every low-carbon technology
+# .center[Same tensions in every low-carbon technology]
 
+## .center[China is manufacturing leader in almost every sector]
 
+.font120[
+Technology | Scale
+----|------
+Solar Panels | From 1% to 70% (2001 - 2019)
+Wind Turbines | 1/3 of global supply (2020)
+Electric Vehicles | 51% of global sales (2021)
+Lithium-ion Batteries | 70% of global production (76% by 2025)
+Nuclear Reactors | From 45 to 88 plants by 2030
+]
+
+---
+
+<center>
+<img src="images/cost-historical.png" width=100%>
+</center>
+
+---
+
+<center>
+<img src="images/savings-historical.png" width=100%>
+</center>
+
+---
+
+<center>
+<img src="images/cost-proj.png" width=100%>
+</center>
 
 ---
 
@@ -134,3 +173,9 @@ jph@gwu.edu `r fa(name = "paper-plane", fill = "white")`
 class: center, middle, inverse 
 
 # Extra slides
+
+---
+
+<center>
+<img src="images/savings-proj.png" width=100%>
+</center>
