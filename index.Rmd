@@ -1,0 +1,136 @@
+---
+title: "Quantifying the role of globalized solar photovoltaic supply chains in reaching climate targets"
+author: "John Paul Helveston, Gang He, & Michael Davidson"
+date: June 25, 2022
+institute: "The George Washington University | Dept. of Engineering Management and Systems Engineering"
+output:
+  xaringan::moon_reader:
+    css:
+      - default
+      - css/lexis.css
+      - css/lexis-fonts.css
+      - css/custom.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+    seal: false
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(fontawesome)
+library(tidyverse)
+library(metathis)
+library(logitr)
+library(cbcTools)
+
+options(
+    htmltools.dir.version = FALSE,
+    knitr.table.format = "html",
+    knitr.kable.NA = '',
+    dplyr.width = Inf,
+    width = 250
+)
+knitr::opts_chunk$set(
+    warning = FALSE,
+    message = FALSE,
+    fig.path = "figs/",
+    fig.width = 7.252,
+    fig.height = 4,
+    comment = "#>",
+    fig.retina = 3
+)
+
+# Setup xaringanExtra options
+xaringanExtra::use_xaringan_extra(c(
+  "tile_view", "panelset", "share_again"))
+xaringanExtra::style_share_again(share_buttons = "none")
+xaringanExtra::use_extra_styles(
+  hover_code_line = TRUE,
+  mute_unhighlighted_code = FALSE
+)
+
+knitr::opts_chunk$set(
+    warning = FALSE,
+    message = FALSE,
+    comment = "#>",
+    fig.path = "figs/",
+    fig.retina = 3 # Better figure resolution
+)
+```
+
+background-image: url("images/climate-bars.png")
+background-size: cover
+
+<br><br><br><br><br><br><br><br>
+.rightcol80[.white[
+## `r rmarkdown::metadata$title`
+### `r rmarkdown::metadata$author`
+### `r rmarkdown::metadata$date`
+]]
+
+---
+
+class: center, middle
+background-color: #FFFFFF
+
+## Between 2010 - 2020, global levelized cost of energy (LCOE) of utility-scale solar PV fell by 85%
+
+<center>
+<img src="images/cost_historical.png" width=70%>
+</center>
+
+---
+
+class: center, middle
+background-color: #FFFFFF
+
+## China's "gift to the world"
+
+.leftcol60[
+<center>
+<img src="images/pv_production.png" width=100%>
+</center>
+]
+
+.rightcol40[
+China comprises ~70% of global PV manufacturing
+
+.left[
+**Response**: 
+
+- US and EU tariffs on imported Chinese PV panels
+- June 2022: Biden invokes the Defense Production Act to accelerate US PV manufacturing
+]]
+
+---
+
+# Same tensions in every low-carbon technology
+
+
+
+---
+
+background-image: url("images/climate-bars.png")
+background-size: cover
+
+<br><br><br><br><br><br><br><br><br><br>
+# .white[Thanks!]
+
+.footer-large[.white[
+.right[
+@johnhelveston `r fa(name = "twitter", fill = "white")`<br>
+@jhelvy `r fa(name = "github", fill = "white")`<br>
+@jhelvy `r fa(name = "weixin", fill = "white")`<br>
+jhelvy.com `r fa(name = "link", fill = "white")`<br>
+jph@gwu.edu `r fa(name = "paper-plane", fill = "white")`
+]]]
+
+---
+
+class: center, middle, inverse 
+
+# Extra slides
