@@ -53,13 +53,21 @@ xaringanExtra::use_extra_styles(
   mute_unhighlighted_code = FALSE
 )
 
-knitr::opts_chunk$set(
-    warning = FALSE,
-    message = FALSE,
-    comment = "#>",
-    fig.path = "figs/",
-    fig.retina = 3 # Better figure resolution
-)
+# Set up website metadata
+meta() %>%
+  meta_general(
+    description = rmarkdown::metadata$subtitle,
+    generator = "xaringan and remark.js"
+  ) %>%
+  meta_name("github-repo" = "jhelvy/2022-isa-solar-learning") %>%
+  meta_social(
+    title = rmarkdown::metadata$title,
+    url = "https://jhelvy.com",
+    og_type = "website",
+    og_author = "John Paul Helveston",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@johnhelveston"
+  )
 ```
 
 background-image: url("images/climate-bars.png")
