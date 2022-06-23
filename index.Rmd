@@ -230,23 +230,161 @@ $$\ln Y = \ln a + b \ln X$$
 
 ---
 
+class: middle
 
+## .center[Data Sources]
+ 
+Country | Data | Source
+--------|-----|----------------
+Global | Installed PV capacity and prices | International Renewable Energy Agency (IRENA)
+U.S. | Installed capacity | Solar Energy Industries Association (SEIA)
+U.S. | Module prices  | Lawrence Berkeley National Laboratory (LBNL) & National Renewable Energy Laboratory (NREL)
+China | Installed capacity & module prices | Energy Research Institute (ERI) & China Photovoltaic Industry Association
+Germany | Installed capacity | IRENA
+Germany | Module prices | Fraunhofer ISE50
+
+All prices are in $2020 USD<br>(inflation adjustments from IMF, exchange rates from Federal Reserve Bank)
 
 ---
 
+## Model results
+
+|                                     | United States        | China                | Germany              |
+| ----------------------------------- | -------------------- | -------------------- | -------------------- |
+|                                     | Est. (Std. Err.)     | Est. (Std. Err.)     | Est. (Std. Err.)     |
+| (Intercept)                         | 15 (1.04)\*\*\*      | 18 (1.58)\*\*\*      | 12 (0.96)\*\*\*      |
+| log(cum\_capacity\_kw)              | \-0.44 (0.045)\*\*\* | \-0.57 (0.070)\*\*\* | \-0.33 (0.042)\*\*\* |
+| log(price\_si)                      | 0.15 (0.058)\*       | 0.23 (0.079)         | 0.21 (0.054)         |
+
+## Learning rates: $L_i = 1 - 2^{\beta_i}$
+
+- U.S.: 26%
+- China: 33%
+- Germany: 20%
+
+---
+
+class: center, middle
+background-color: #FFFFFF
+
+## U.S.: 26%; China: 33%; Germany: 20%
+ 
+<center>
+<img src="images/cost_historical_global_plot.png" width=100%>
+</center>
+
+---
+
+## .center["National Markets" Counterfactual Scenario]
+
+**Assumption**: learning-related price decreases in country _i_ in year _t_ are derived from incrementally more nationally-installed PV capacity
+
+## $$q_t - q_{t-1} = (q_{it} - q_{it-1}) + (1 - \lambda_t) (q_{jt} - q_{jt - 1})$$
+
+## $(q_{it} - q_{it-1})$: Amount installed in country _i_
+## $(q_{jt} - q_{jt-1})$: Amount installed in all other countries
+
+---
+
+class: center
+
+## $$q_t - q_{t-1} = (q_{it} - q_{it-1}) + (1 - \lambda_t) (q_{jt} - q_{jt - 1})$$
+
+<br>
+
+.leftcol[
+
+## **Global markets**
+
+$\lambda_t = 0$ 
+
+Capacity from all countries
+
+$$(q_{it} - q_{it-1}) + (q_{jt} - q_{jt - 1})$$
+
+]
+
+.rightcol[
+
+## **National markets**
+
+$\lambda_t = 1$
+
+Capacity only from country _i_
+
+$$(q_{it} - q_{it-1})$$
+
+<br>
+
+$\lambda_t$ -> 1 over 10-year period
+
+]
+
+---
+
+class: middle
 background-color: #FFFFFF
 
 <center>
 <img src="images/cost-historical.png" width=100%>
 </center>
 
+**Higher prices in 2020**:
+
+- 54% higher in China ($387 versus $250 per kW)
+- 83% in higher Germany ($652 versus $357 per kW)
+- 107% higher in the U.S. ($877 versus $424 per kW)
+
 ---
 
+class: middle, center
 background-color: #FFFFFF
+
+## **Total Savings: $67 billion ($50 - $84 billion)**
 
 <center>
 <img src="images/savings-historical.png" width=100%>
 </center>
+
+---
+
+class: inverse, middle, center
+
+# Future projections
+
+---
+
+class: center, middle
+
+## Two future projection scenarios out to 2030
+
+.leftcol[
+
+#### National Trends (NT)
+
+| Country | 2030 Target (GW) | Implied CAGR |
+| ------- | ---------------- | ------------ |
+| U.S.    | 295              | 12%          |
+| China   | 750              | 12%          |
+| Germany | 103              | 7%           |
+| World   | 2,115            | 11%          |
+
+]
+
+.rightcol[
+
+#### Sustainable Development (SD)
+
+| Country | 2030 Target (GW) | Implied CAGR |
+| ------- | ---------------- | ------------ |
+| U.S.    | 628              | 21%          |
+| China   | 1,106            | 17%          |
+| Germany | 147              | 11%          |
+| World   | 3,125            | 16%          |
+
+(Sustainable Development Scenario in the 2020 IEA World Energy Outlook)
+
+]
 
 ---
 
@@ -255,6 +393,46 @@ background-color: #FFFFFF
 <center>
 <img src="images/cost-proj.png" width=100%>
 </center>
+
+---
+
+## .center[Higher prices in 2030]
+
+.leftcol[
+
+#### .center[National Trends (NT)]
+
+.center[**~20% higher in each country**]
+
+- China: $162 versus $135 per kW
+- Germany: $298 versus $251 per kW
+- U.S.: $320 versus $262 per kW
+
+]
+
+.rightcol[
+
+#### .center[Sustainable Development (SD)]
+
+.center[**~25% higher in each country**]
+
+- China: $136 versus $108 per kW
+- Germany: $276 versus $221 per kW
+- U.S.: $276 versus $221 per kW
+
+]
+
+<br>
+
+For comparison, NREL's 2021 Annual Technology Baseline report predicts $170, $190, and $320 / kW by 2030 in advanced, moderate, and conservative improvement scenarios.
+
+---
+
+class: middle, center, inverse
+
+# Sensitivity analysis app
+
+## https://jhelvy.shinyapps.io/solar-learning-2021/
 
 ---
 

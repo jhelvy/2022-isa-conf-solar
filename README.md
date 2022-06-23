@@ -1,8 +1,8 @@
 
 Slides for my Industry Studies Conference talk in Philadelphia, PA, on June 25, 2022.
 
-- [View the slides](https://jhelvy.github.io/solar-learning-isa)
-- [Download the slides as a pdf](https://github.com/jhelvy/solar-learning-isa/raw/main/solar-learning-isa.pdf)
+- [View the slides](https://jhelvy.github.io/2022-isa-conf-solar)
+- [Download the slides as a pdf](https://github.com/jhelvy/2022-isa-conf-solar/raw/main/2022-isa-conf-solar.pdf)
 
 **Title**
 
