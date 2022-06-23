@@ -59,7 +59,7 @@ meta() %>%
     description = rmarkdown::metadata$subtitle,
     generator = "xaringan and remark.js"
   ) %>%
-  meta_name("github-repo" = "jhelvy/2022-isa-solar-learning") %>%
+  meta_name("github-repo" = "jhelvy/2022-isa-conf-solar") %>%
   meta_social(
     title = rmarkdown::metadata$title,
     url = "https://jhelvy.com",
@@ -73,11 +73,15 @@ meta() %>%
 background-image: url("images/climate-bars.png")
 background-size: cover
 
-<br><br><br><br><br><br><br><br>
-.rightcol80[.white[
+<br><br><br><br><br><br><br><br><br>
+.rightcol85[.white[
 ## `r rmarkdown::metadata$title`
-### `r rmarkdown::metadata$author`
-### `r rmarkdown::metadata$date`
+
+**.white[John Paul Helveston]**, George Washington University<br>
+Gang He, Stonybrook University<br>
+Michael Davidson, UC San Diego
+
+`r rmarkdown::metadata$date`
 ]]
 
 ---
@@ -143,17 +147,110 @@ Nuclear Reactors | From 45 to 88 plants by 2030
 
 ---
 
+class: middle 
+
+## **Title**:<br>`r rmarkdown::metadata$title`
+
+<br>
+
+## **Translation**:<br>What's the cost of national versus global supply chains?
+
+???
+
+Restricting the free flow of capital, talent, and innovation 
+
+Localizing benefits in terms of growth, employment, and trade surpluses
+
+---
+
+background-color: #FFFFFF
+
+## .center[Learning curve model]
+
+<center>
+<img src="images/learning-curve.png" width=65%>
+</center>
+
+---
+
+background-color: #FFFFFF
+
+## .center[Learning curve model]
+
+.leftcol60[
+
+<center>
+<img src="images/learning-curve.png" width=100%>
+</center>
+
+]
+
+.rightcol40[
+
+In context of solar PV:
+
+- X: Cumulative installed cap.
+- Y: = Price per kW
+
+<br>
+
+Log transformation:
+
+$$\ln Y = \ln a + b \ln X$$
+
+]
+
+---
+
+## Two-factor learning curve model:
+
+<br>
+
+## $$\ln p_{it} = \ln \alpha_i + \beta_i \ln q_{t} + \gamma_i \ln s_{t} + \varepsilon_{it}$$
+
+<br>
+
+## price ($ / kW) = intercept + installed capacity + silicon price
+
+## for country _i_ and year _t_
+
+---
+
+## Two-factor learning curve model:
+
+<br>
+
+## $$\ln p_{it} = \ln \alpha_i + \beta_i \ln q_{t} + \gamma_i \ln s_{t} + \varepsilon_{it}$$
+
+<br>
+
+## Learning rate:
+
+## $$L_i = 1 - 2^{\beta_i}$$
+
+---
+
+
+
+---
+
+background-color: #FFFFFF
+
 <center>
 <img src="images/cost-historical.png" width=100%>
 </center>
 
 ---
 
+background-color: #FFFFFF
+
 <center>
 <img src="images/savings-historical.png" width=100%>
 </center>
 
 ---
+
+background-color: #FFFFFF
 
 <center>
 <img src="images/cost-proj.png" width=100%>
