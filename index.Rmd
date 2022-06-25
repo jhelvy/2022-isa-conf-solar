@@ -436,11 +436,16 @@ class: middle, center, inverse
 
 ---
 
+class: inverse 
 background-image: url("images/climate-bars.png")
 background-size: cover
 
 <br><br><br><br><br><br><br><br><br><br>
-# .white[Thanks!]
+# Thanks!
+
+### Slides:
+
+### https://github.com/jhelvy/2022-isa-conf-solar
 
 .footer-large[.white[
 .right[
